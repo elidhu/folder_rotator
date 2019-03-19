@@ -1,13 +1,19 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='FolderRotator',
-    version='0.0.1',
+    name='folder_rotator',
+    version='0.0.2',
     packages=find_packages(),
     author='Kevin Glasson',
     author_email='kevinglasson+folderrotator@gmail.com',
+    url='https://github.com/kevinglasson/folder_rotator',
     license='LICENSE.txt',
     long_description=open('README.txt').read(),
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: Developers',
+        'Programming Language :: Python :: 3.6',
+    ],
     install_requires=[
     ],
     setup_requires=[
