@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='folder_rotator',
-    version='0.0.2',
+    version='0.0.4',
     packages=find_packages(),
     author='Kevin Glasson',
     author_email='kevinglasson+folderrotator@gmail.com',
