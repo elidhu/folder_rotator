@@ -29,3 +29,14 @@ def test_increment_output_folder(tmpdir):
         output_folder = pathlist[-1]
         assert output_folder == f"output_folder_000{i}", "Output folder not incremented as expected"
         touch(os.path.join(fr.get_output_path(), testfile))
+
+
+def test_folder_already_exists(tmpdir):
+    fr = Rotator(tmpdir, max_output_files=1)
+    testfile = 'temp.txt'
+    touch(os.path.join(fr.get_output_path(), testfile))
+    fr = Rotator(tmpdir, max_output_files=1)
+    assert fr.current_output_folder_index == 1, "Failed to initialise to the correct index when folders already exist"
+    touch(os.path.join(fr.get_output_path(), testfile))
+    fr = Rotator(tmpdir, max_output_files=1)
+    assert fr.current_output_folder_index == 2, "Failed to initialise to the correct index when folders already exist"
