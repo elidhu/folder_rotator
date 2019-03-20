@@ -9,7 +9,7 @@ The actual problem
 ++++++++++++++++++
 
 Look, I really don't know that much about it, but apparently in the Linux
-filesystem there is a datastructure called an inode that describes things like
+filesystem there is a data-structure called an inode that describes things like
 files and folders. The inode stores things like the attributes of the object
 and where it is located on disk. Anyway, you have a limit of these per folder,
 so when you write too many files per folder (in my particular case this was
